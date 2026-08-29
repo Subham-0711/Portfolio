@@ -303,6 +303,8 @@
     bottom: 0;
     z-index: 11;
     position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .character-model::after,
@@ -312,9 +314,9 @@
 
   .landing-intro {
     top: 50%;
-    left: auto;
-    right: 66%;
-    transform: translate(0%, -50%);
+    left: 6%;
+    right: auto;
+    transform: translateY(-50%);
   }
 
   .landing-info {
@@ -322,18 +324,18 @@
     top: 51%;
     z-index: inherit;
     text-align: left;
-    transform: translate(0%, -50%);
-    right: auto;
-    left: 66%;
+    transform: translateY(-50%);
+    right: 6%;
+    left: auto;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .landing-intro {
     top: 50%;
-    left: auto;
-    right: 70%;
-    transform: translate(0%, -50%);
+    left: 8%;
+    right: auto;
+    transform: translateY(-50%);
   }
 
   .landing-info {
@@ -341,9 +343,9 @@
     top: 51%;
     z-index: inherit;
     text-align: left;
-    transform: translate(0%, -50%);
-    right: auto;
-    left: 70%;
+    transform: translateY(-50%);
+    right: 8%;
+    left: auto;
   }
 }
 

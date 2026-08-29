@@ -1,0 +1,199 @@
+.softskills-section {
+  position: relative;
+  z-index: 1;
+  background-color: var(--backgroundColor);
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.softskills-container {
+  width: var(--cWidth);
+  max-width: 1280px;
+  margin: auto;
+}
+
+.softskills-section h2 {
+  font-size: 50px;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-family: "Geist", sans-serif;
+}
+
+.softskills-section h2 > span {
+  color: var(--accentColor);
+}
+
+.softskills-subtitle {
+  font-size: 16px;
+  color: #94a3b8;
+  font-style: italic;
+  margin: 0 0 40px 0;
+}
+
+/* Constellation Area */
+.constellation-area {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  overflow: hidden;
+  touch-action: none;
+}
+
+.constellation-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.constellation-line {
+  stroke: rgba(255, 255, 255, 0.12);
+  stroke-width: 1;
+  transition: stroke 0.3s ease, stroke-width 0.3s ease;
+}
+
+.constellation-line.active-line {
+  stroke: rgba(34, 211, 238, 0.6);
+  stroke-width: 2;
+  filter: drop-shadow(0 0 6px rgba(34, 211, 238, 0.4));
+}
+
+/* Nodes */
+.constellation-node {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition: left 0.4s cubic-bezier(0.15, 0.85, 0.35, 1.2),
+              top 0.4s cubic-bezier(0.15, 0.85, 0.35, 1.2),
+              transform 0.3s ease,
+              border-color 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+  z-index: 5;
+}
+
+.central-node {
+  background: linear-gradient(135deg, #22d3ee 0%, #a855f7 100%);
+  color: #0f172a;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 2px;
+  padding: 14px 22px;
+  border-radius: 30px;
+  box-shadow: 0 0 25px rgba(34, 211, 238, 0.5);
+  z-index: 10;
+}
+
+.skill-node {
+  background: rgba(30, 41, 59, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 8px 14px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  backdrop-filter: blur(8px);
+}
+
+.skill-node .node-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: #e2e8f0;
+  white-space: nowrap;
+}
+
+.skill-node .node-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22d3ee;
+}
+
+.skill-node.hovered {
+  border-color: #22d3ee;
+  background: rgba(34, 211, 238, 0.2);
+  transform: translate(-50%, -50%) scale(1.15);
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.4);
+  z-index: 12;
+}
+
+.skill-node.hovered .node-text {
+  color: #ffffff;
+}
+
+.skill-node.connected {
+  border-color: rgba(168, 85, 247, 0.5);
+  background: rgba(168, 85, 247, 0.15);
+}
+
+/* Detail Card overlay */
+.skill-detail-card {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(34, 211, 238, 0.4);
+  border-radius: 12px;
+  padding: 16px 20px;
+  max-width: 320px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  z-index: 20;
+  animation: fadeInCard 0.3s ease forwards;
+}
+
+@keyframes fadeInCard {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-cat {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #a855f7;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.skill-detail-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #f8fafc;
+  margin: 0 0 6px 0;
+}
+
+.skill-detail-card p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #cbd5e1;
+  margin: 0;
+  font-style: italic;
+}
+
+@media only screen and (max-width: 768px) {
+  .softskills-section h2 {
+    font-size: 38px;
+  }
+  .constellation-area {
+    height: 480px;
+  }
+  .skill-detail-card {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    max-width: none;
+  }
+}

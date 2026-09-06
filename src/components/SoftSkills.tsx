@@ -221,7 +221,7 @@ const SoftSkills = () => {
     <div className="softskills-section section-container" id="softskills">
       <div className="softskills-container">
         <h2>
-          HOW I <span>WORK</span>
+          SOFT <span>SKILLS</span>
         </h2>
         <p className="softskills-subtitle">
           "Technical skills help me build. Soft skills shape how I build."

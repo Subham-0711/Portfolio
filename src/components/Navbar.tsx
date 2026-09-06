@@ -113,7 +113,7 @@ const Navbar = () => {
           </li>
           <li>
             <a data-href="#softskills" href="#softskills">
-              <HoverLinks text="HOW I WORK" />
+              <HoverLinks text="SOFT SKILLS" />
             </a>
           </li>
           <li>

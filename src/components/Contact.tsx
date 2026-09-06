@@ -24,11 +24,11 @@ const Contact = () => {
               <div className="contact-item-info">
                 <span className="contact-item-label">Personal Email</span>
                 <a
-                  href="mailto:ksubhamkumarpatra22007@gmail.com"
+                  href="mailto:ksubhamkumarpatra2007@gmail.com"
                   className="contact-link"
                   data-cursor="disable"
                 >
-                  ksubhamkumarpatra22007@gmail.com
+                  ksubhamkumarpatra2007@gmail.com
                 </a>
               </div>
             </div>

@@ -96,12 +96,12 @@ const SocialIcons = () => {
       </div>
       <a
         className="resume-button"
-        href="#"
+        href="/K_Subham_Kumar_Patra_CV.pdf"
         target="_blank"
         rel="noreferrer"
-        title="Resume Placeholder"
+        title="View CV"
       >
-        <HoverLinks text="RESUME" />
+        <HoverLinks text="CV" />
         <span>
           <TbNotes />
         </span>
